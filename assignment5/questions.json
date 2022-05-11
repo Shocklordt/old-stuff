@@ -1,0 +1,49 @@
+[{
+        "question": "What are two things you can never eat for breakfast ? ",
+        "choices": [{
+                "text": "bread and butter",
+                "points": 0
+            },
+            {
+                "text": "lunch and dinner",
+                "points": 1
+            },
+            {
+                "text": "eggs and bacon",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "What is always coming but never arrives ? ",
+        "choices": [{
+                "text": "electric current",
+                "points": 0
+            },
+            {
+                "text": "expiration date",
+                "points": 0
+            },
+            {
+                "text": "tomorrow",
+                "points": 1
+            }
+        ]
+    },
+    {
+        "question": "What word is spelled incorrectly in every single dictionary? ",
+        "choices": [{
+                "text": "incorrectly",
+                "points": 1
+            },
+            {
+                "text": "misspell",
+                "points": 0
+            },
+            {
+                "text": "their",
+                "points": 0
+            }
+        ]
+    }
+]

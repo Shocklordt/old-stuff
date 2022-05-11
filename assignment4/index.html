@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <script src="height.js"></script>
+    <script src="send.js"></script>
+</head>
+
+<body>
+    <p>HELLO</p>
+    <form action="..." method="post" onsubmit="validation(this)">
+
+        <fieldset>
+            <legend>Form</legend>
+
+            <label for="full_name"> Full Name: </label>
+            <input type="text" name="full_name" required pattern="\w+" id="full_name" autofocus="on" maxlength="60" placeholder="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
+            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis"><br><br>
+
+            <label for="password"> Password: </label>
+            <input type="password" name="password" id="password1" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" onchange=""><br><br>
+
+            <label for="password"> Password again: </label>
+            <input type="password" name="password" id="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" required><br><br>
+
+            <label for="gender"> Gender: </label>
+            <input type="radio" name="gender" value="male" id="male"><label for="male"> male</label>
+            <input type="radio" name="gender" value="female" id="female"><label for="female"> female</label>
+            <input type="radio" name="gender" value="other" id="other"><label for="other"> other</label><br><br>
+
+            <label for="hobbies"> Hobbies: </label>
+            <input type="checkbox" name="hobbies" id="sports" value="sports"><label for="sports"> sports</label>
+            <input type="checkbox" name="hobbies" id="games" value="games"><label for="games"> games</label>
+            <input type="checkbox" name="hobbies" id="TV" value="TV"><label for="TV"> TV</label>
+            <input type="checkbox" name="hobbies" id="music" value="music"><label for="music"> music</label><br><br>
+
+            <label for="birthdate"> Date of Birth: </label>
+            <input type="datetime-local" name="datetime" id="birthdate"><br><br>
+
+            <label for="height"> Height: <span id = "height1"></span>cm</label>
+            <input type="range" name="height" id="range" min="40" max="300" oninput="changeInputValue(this.value)">
+            <input type="number" id="number" min="40" max="300" onkeyup="changeRangeValue(this.value)" />
+            <br><br>
+
+            <label> Favorite Color: </label>
+            <input type="color" id="favorite_color"><br><br>
+
+            <label> Home Country: </label>
+            <select name="country" class="form-control" id="country">
+                <option value="0" label="Finland">Finland</option>
+                <option value="RU" label="Russia">Russia</option>
+                <optgroup id="country-optgroup-Baltic" label="Baltic">
+                    <option value="EE" label="Estonia">Estonia</option>
+                    <option value="LV" label="Latvia">Latvia</option>
+                    <option value="LT" label="Lithuania">Lithuania</option>
+                </optgroup>
+                <optgroup id="country-optgroup-Scandinavia" label="Scandinavia">
+                    <option value="SE" label="Sweden">Sweden</option>
+                    <option value="NO" label="Norway">Norway</option>
+                    <option value="DK" label="Denmark">Denmark</option>
+                </optgroup>
+            </select><br><br>
+
+            <label> Profession: </label>
+            <input list="professions" id="myProfession" name="myProfession" />
+            <datalist id="professions">
+                    <option value="lawyer"></option>
+                    <option value="physician"></option>
+                    <option value="teacher"></option>
+                    <option value="plumber"></option>
+                    <option value="policeman"></option>
+                    <option value="wizard"></option>
+            </datalist><br><br>
+
+            <label> Message: </label><br>
+            <textarea name="message" id="message" rows="6" cols="60" placeholder="Type your text here. Max 1000 characters." maxlength="1000" required pattern="\w+"></textarea><br>
+            <input type="submit" name="btn_send" id="btn_send" value="Send">
+        </fieldset>
+
+    </form>
+
+    <h3> Result: </h3><br>
+    <div class="output_area" id="output_name"></div>
+    <div class="output_area" id="output_pass1"></div>
+    <div class="output_area" id="output_pass2"></div>
+    <div class="output_area" id="output_date"></div>
+    <div class="output_area" id="output_hobbies"></div>
+    <div class="output_area" id="output_gender"></div>
+    <div class="output_area" id="output_height"></div>
+    <div class="output_area" id="output_color"></div>
+    <div class="output_area" id="output_country"></div>
+    <div class="output_area" id="output_prof"></div>
+    <div class="output_area" id="output_msg"></div>
+</body>
+
+</html>

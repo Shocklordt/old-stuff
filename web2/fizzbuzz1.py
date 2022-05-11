@@ -1,0 +1,1 @@
+for i in range(1,100): print("fizz"*(i%3<1)+(i%5<1)*"buzz" or i)
